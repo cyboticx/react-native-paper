@@ -48,6 +48,7 @@ type TouchableProps = TouchableWithoutFeedbackProps & {
   key: string;
   route: Route;
   children: React.ReactNode;
+  disabled: boolean;
   borderless?: boolean;
   centered?: boolean;
   rippleColor?: string;
@@ -862,6 +863,7 @@ class BottomNavigation extends React.Component<Props, State> {
                   route,
                   borderless: true,
                   centered: true,
+                  disabled: false,
                   rippleColor: touchColor,
                   onPress: () => this.handleTabPress(index),
                   testID: getTestID({ route }),
